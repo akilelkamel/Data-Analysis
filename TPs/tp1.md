@@ -1,6 +1,6 @@
 # TP 1 : Introduction à R et RStudio
 
-![](https://www.r-project.org/logo/Rlogo.png)
+![](../img/Rlogo.png)
 
 **R** est un logiciel pour l'analyse statistique des données. Il fournit des 
 procédures usuelles et possède des possibilités graphiques performantes pour 
