@@ -1,0 +1,101 @@
+---
+title: "TP 1 : Introduction à R et RStudio"
+author: "Akil Elkamel"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+editor: visual
+execute:
+  eval: false
+editor_options: 
+  chunk_output_type: console
+---
+
+![](../img/Rlogo.png)
+
+**R** est un logiciel pour l'analyse statistique des données.
+Il fournit des procédures usuelles et possède des possibilités graphiques performantes pour explorer les données.
+Pouvant être utilisé aussi bien en mode interactif qu'en mode batch, R est un logiciel libre, dont le code source est disponible et qui peut être recopié et diffusé gratuitement.
+Des versions compilées de R sont disponibles pour Linux, Windows et MacOS.
+
+## Installation du système de base
+
+Le site principal du logiciel R est [www.r-project.org](www.r-project.org).
+Le téléchargement de R se fait à partir d'un des sites du «Comprehensive R archive Network» (CRAN).
+
+## Environnement de développement RStudio / RStudio Cloud
+
+RStudio est un environnement de développement intégré (IDE) pour R.
+Il facilite l'utlisation de R en fournissant une interface utilisateur conviviale avec des fonctionnalités telles que l'édition de code, la gestion de projets, la visualisation de données et bien plus encore.
+
+RStudio est disponible en deux versions :
+
+-   Une version de bureau (RStudio Desktop): Télécharger et installer RStudio Desktop depuis [ce lien](https://posit.co/download/rstudio-desktop/)
+
+-   Une version en ligne (RStudio Cloud) : Créer un compte gratuit sur [RStudio Cloud](https://rstudio.cloud/) pour utiliser RStudio directement dans votre navigateur web, sans avoir besoin d'installer quoi que ce soit sur votre ordinateur.
+
+## Prise en main de RStudio
+
+L'interface de RStudio est divisée en plusieurs panneaux principaux :
+
+1.  **Script Editor (Éditeur de script)** : C'est l'endroit où vous écrivez et éditez votre code R. Vous pouvez créer des scripts R (.R) ou des documents R Markdown (.Rmd) pour organiser votre travail.
+
+2.  **Console** : C'est l'endroit où vous pouvez exécuter des commandes R directement. Vous pouvez taper des commandes et voir les résultats immédiatement.
+
+3.  **Environment/History (Environnement/Historique)** : Le panneau Environnement affiche les objets (variables, fonctions, etc.) que vous avez créés dans votre session R. L'onglet Historique montre les commandes que vous avez exécutées précédemment.
+
+4.  **Files/Plots/Packages/Help (Fichiers/Graphiques/Packages/Aide)** : Ce panneau a plusieurs onglets. L'onglet Fichiers vous permet de naviguer dans vos fichiers et dossiers. L'onglet Graphiques affiche les graphiques que vous créez. L'onglet Packages vous permet de gérer les packages R installés, et l'onglet Aide fournit une documentation sur les fonctions R.
+
+
+## Exécution de code R
+
+Vous pouvez exécuter du code R de plusieurs manières dans RStudio : 
+-   **Dans la console** : Tapez une commande R directement dans la console et appuyez sur Entrée pour l'exécuter.
+-   **Dans l'éditeur de script** : Écrivez votre code dans l'éditeur de script, puis sélectionnez la ligne ou le bloc de code que vous souhaitez exécuter et appuyez sur Ctrl + Entrée pour l'exécuter dans la console.
+-   **Exécution de scripts** : Vous pouvez exécuter un script entier en cliquant sur le bouton "Source" dans l'éditeur de script ou en utilisant le raccourci Ctrl + Shift + S.
+
+## Installation et gestion des packages
+R dispose d'un système de packages qui permet d'étendre ses fonctionnalités. Pour installer un package, vous pouvez utiliser la fonction `install.packages("nom_du_package")`. Par exemple, pour installer le package ggplot2, vous pouvez exécuter la commande suivante dans la console :
+
+```{r}
+install.packages("ggplot2")
+```
+
+Une fois installé, vous devez charger le package dans votre session R en utilisant la fonction `library(nom_du_package)`. Par exemple :
+
+```{r}
+library(ggplot2)
+```
+
+Vous pouvez gérer vos packages via l'onglet "Packages" dans le panneau inférieur droit de RStudio, où vous pouvez voir les packages installés, les mettre à jour ou en installer de nouveaux.
+
+## Aide et documentation
+
+R dispose d'une documentation complète pour toutes ses fonctions et packages. Vous pouvez accéder à l'aide en utilisant la fonction `?nom_de_la_fonction` ou `help("nom_de_la_fonction")`. Par exemple, pour obtenir de l'aide sur la fonction `mean`, vous pouvez exécuter :
+```{r}
+?mean
+```
+
+Vous pouvez également utiliser l'onglet "Help" dans le panneau inférieur droit de RStudio pour rechercher des fonctions et des packages.
+
+## Ressources supplémentaires
+
+-   [R for Data Science](https://r4ds.had.co.nz/) : Un livre en ligne gratuit qui couvre les bases de R et de la science des données.
+-   [RStudio Cheatsheets](https://rstudio.com/resources/cheatsheets/) : Des fiches pratiques pour R et RStudio.
+-   [R-bloggers](https://www.r-bloggers.com/) : Un site qui agrège des articles de blog sur R.
+-   [Stack Overflow](https://stackoverflow.com/questions/tagged/r) : Une communauté en ligne où vous pouvez poser des questions et trouver des réponses sur R.
+
+## Exercice
+
+1.  Installez R et RStudio (ou créez un compte RStudio Cloud).
+2.  Ouvrez RStudio et familiarisez-vous avec l'interface.
+3.  Créez un nouveau script R et écrivez un code simple pour calculer la moyenne d'un vecteur de nombres.
+```{r}
+# Exemple de vecteur
+numbers <- c(1, 2, 3, 4, 5)
+# Calcul de la moyenne
+mean_value <- mean(numbers)
+print(mean_value)
+```
+
