@@ -1,9 +1,9 @@
 ---
 title: "TP 1 : Introduction à R et RStudio"
-author: "Akil Elkamel"
+#author: "Akil Elkamel"
 format:
-  html:
-    toc: true
+  pdf:
+    toc: false
     toc-depth: 2
 editor: visual
 execute:
@@ -12,7 +12,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-![](../img/Rlogo.png)
+![](../img/Rlogo.png){fig-align="center"}
 
 **R** est un logiciel pour l'analyse statistique des données.
 Il fournit des procédures usuelles et possède des possibilités graphiques performantes pour explorer les données.
@@ -86,11 +86,157 @@ Vous pouvez également utiliser l'onglet "Help" dans le panneau inférieur droit
 -   [R-bloggers](https://www.r-bloggers.com/) : Un site qui agrège des articles de blog sur R.
 -   [Stack Overflow](https://stackoverflow.com/questions/tagged/r) : Une communauté en ligne où vous pouvez poser des questions et trouver des réponses sur R.
 
-## Exercice
+## Premiers pas
+L'interaction avec R se fait en tapant des commandes dans la fenêtre R Console. Le principe de R est le suivant : vous entrez une ligne de commande, et quand vous tapez sur « Entrée », R lit cette ligne et effectue l'opération demandée.
 
-1.  Installez R et RStudio (ou créez un compte RStudio Cloud).
-2.  Ouvrez RStudio et familiarisez-vous avec l'interface.
-3.  Créez un nouveau script R et écrivez un code simple pour calculer la moyenne d'un vecteur de nombres.
+Pour vous familiariser avec R, taper les commandes suivantes une par une dans la console ou dans un script R:
+
+```{r}
+5+7
+```
+
+```{r}
+a = 5
+```
+
+```{r}
+a
+```
+
+```{r}
+b <- 10
+```
+
+```{r}
+b
+```
+
+```{r}
+x = 1 : 20
+```
+
+```{r}
+y = rnorm(20)
+```
+
+```{r}
+plot (x, y)
+```
+
+```{r}
+plot (x, y, pch=16, col=2)
+```
+
+
+## Manipulation de base
+
+### Objets
+
+L'objet de base en R est le vecteur. Un vecteur peut contenir des valeurs numériques, des valeurs binaires (True ou False), des chaînes de caractères... 
+
+Les fonctions les plus utilisées pour créer des vecteurs sont `c`, `rep` et `seq`:
+
+```{r}
+c(1,2,3,4,5,6)
+c(T,T,F,F)
+c('a','b')
+rep(55,10)
+rep(c(1,2),10)
+rep(c('a','b'),c(2,7))
+seq(1,10,by=0.1)
+```
+
+### Accéder aux éléments d'un vecteur
+
+Soit le vecteur `a` composé par 50 valeurs aléatoires :
+
+```{r}
+a = rnorm(50)
+```
+
+Que donnent les commandes suivantes ?
+
+```{r}
+a[1]
+a[2]
+a[c(1,3,5)]
+a>0
+a[a>0]
+```
+
+
+Une particularité de R est que les éléments d'un vecteur peuvent avoir des noms :
+
+```{r}
+v=c(1,2,3,4)
+names(v)=c('alpha','beta','gamma','delta')
+v['beta']
+```
+
+
+
+### Arrays, listes et data.frames
+
+D'autres objets de R sont les les listes, les arrays (vecteurs multidimensionnels) et les `data.frames`. Les `data.frames` sont des listes de vecteurs qui ont tous la même longueur. Les `data.frames` sont trés bien adaptés pour stocker des données présentées sous forme de tableau bi-dimensionnel.
+
+```{r}
+a=array(1:20,dim=c(4,5))
+a[2,4]
+```
+
+
+```{r}
+b=list(alpha=1:3, beta=c('a','b','c','d'))
+names(b)
+b$alpha
+b$beta
+```
+
+
+```{r}
+c=data.frame(a=gl(2,5,10),b=1:10,x=rnorm(10))
+c$a
+c$b
+c$x
+c[1:2,]
+```
+
+### Les matrices
+
+```{r}
+a=matrix(1:9,nrow=3)
+a
+a=matrix(1:9,nrow=3,byrow=T)
+a
+```
+
+
+```{r}
+b=matrix(c(5,3,7,4,6,3,1,6,3,2,8,5),nrow=4)
+b
+b=matrix(c(5,3,7,4,6,3,1,6,3,2,8,5),nrow=4,byrow=T)
+b
+```
+
+
+```{r}
+v=1:3 # ou v=c(1,2,3)
+v
+c=cbind(a,v)
+d=rbind(a,b)
+c
+d
+```
+
+
+
+
+
+### Utilisation d'une fonction
+
+Dans cet exemple nous utilisons la fonction `mean` pour calculer la moyenne des valeurs stockées dans le vecteur `numbers`. Puis nous utilisons la fonction `print` pour afficher la valeur de la variable `mean_value`.
+
+
 ```{r}
 # Exemple de vecteur
 numbers <- c(1, 2, 3, 4, 5)
