@@ -17,7 +17,7 @@ Ressources du cours d’analyse de données : supports de cours, diapositives, t
 
 ## Travaux pratiques
 
-- [TP 1 : Introduction à R et RStudio](TPs/tp1.html)
+- [TP 1 : Introduction à R et RStudio](TPs/tp1.pdf)
 
 - [TP2: Nettoyage et préparation des données](TPs/tp2.pdf)
 
