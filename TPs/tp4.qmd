@@ -1,0 +1,56 @@
+---
+title: "TP4 : La régression linéaire"
+#author: "Akil Elkamel"
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+editor: visual
+execute:
+  eval: false
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Objectifs
+
+-   Régression linéaire simple
+-   Régression linéaire multiple
+
+------------------------------------------------------------------------
+
+# 1. Régression linéaire simple (Dataset: mtcars)
+
+### Exercice 1 : Analyse exploratoire
+
+1.  Charger `mtcars`.
+2.  Visualiser `mpg` \~ `wt`.
+3.  Décrire la relation.
+
+### Exercice 2 : Ajustement du modèle
+
+1.  Ajuster un modèle de régression linéaire simple pour `mpg` \~ `wt` en utilsant la fonction `lm()`.
+
+2.  Interpréter les résultats du modèle.
+
+### Exercice 3 : Visualisation
+
+Tracer la droite de régression avec ggplot2.
+
+------------------------------------------------------------------------
+
+# 2. Régression linéaire multiple (Dataset: mtcars)
+
+### Exercice 4 : Modèle multiple
+
+1.  Ajuster un modèle de régression linéaire multiple de `mpg` en fonction de `wt`, `hp` et `cyl`
+2.  Comparer au modèle simple.
+3.  Variable la plus influente ?
+4.  Comparer R² et R² ajusté.
+
+### Exercice 5 : Prédictions
+
+Prédire `mpg` pour wt=3, hp=120, cyl=6.
+
+------------------------------------------------------------------------
