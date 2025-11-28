@@ -23,6 +23,6 @@ Ressources du cours d’analyse de données : supports de cours, diapositives, t
 
 - [TP3: Visualisation des données](TPs/tp3.pdf)
 
-- [TP4: Analyse statistique des données](TPs/tp4.pdf)
+- [TP4: La régression linéaire](TPs/tp4.pdf)
 
-- [TP5: Modélisation prédictive](TPs/tp5.pdf)
+- [TP5: La classification automatique (Clustering)](TPs/tp5.pdf)
