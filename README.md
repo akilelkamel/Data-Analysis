@@ -11,9 +11,9 @@ Ressources du cours d’analyse de données : supports de cours, diapositives, t
 
 - [Chapitre 3: Analyse exploratoire des données](slides/chapter3.pdf)
 
-- [Chapitre 4: Analyse statistique et inférence](slides/chapter4.pdf)
+- [Chapitre 4: Méthodes d'analyse statistique](slides/chapter4.pdf)
 
-- [Chapitre 5: Méthodes analytiques avancées](slides/chapter5.pdf)
+- Chapitre 5: Méthodes analytiques avancées
 
 ## Travaux pratiques
 
@@ -23,6 +23,6 @@ Ressources du cours d’analyse de données : supports de cours, diapositives, t
 
 - [TP3: Visualisation des données](TPs/tp3.pdf)
 
-- [TP4: La régression linéaire](TPs/tp4.pdf)
+- TP4: La régression linéaire
 
-- [TP5: La classification automatique (Clustering)](TPs/tp5.pdf)
+- TP5: La classification automatique (Clustering)
